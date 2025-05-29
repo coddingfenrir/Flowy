@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flowy.Server", "Flowy.Server\Flowy.Server.csproj", "{293786DD-1ADF-4D4D-AA95-7271A38DAD95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flowy.Server", "Flowy.Server\Flowy.Server.csproj", "{293786DD-1ADF-4D4D-AA95-7271A38DAD95}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "flowy.client", "flowy.client\flowy.client.esproj", "{62651D27-9468-43B8-A99D-6BD6DA55EB25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Çözüm Öğeleri", "Çözüm Öğeleri", "{DB95C0D0-FDBA-45EB-8F8B-08CEAB8D26D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

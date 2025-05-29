@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Flowy.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+241b6b30cf810ad9efebc6ca41d04736f78fde8f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Flowy.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Flowy.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-router-dom": "^7.6.1",
     "reactflow": "^11.11.4"
   }
 }
