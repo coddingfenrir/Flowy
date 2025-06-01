@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+Ôªøimport React, { useState } from 'react';
+import { Routes, Route, useNavigate, useLocation} from 'react-router-dom';
 import Header from './components/Header';
 import CreateWorkflowModalPopup from './components/CreateWorkFlowModalPopUp';
 import WorkflowDesigner from './WorkflowDesigner';
@@ -7,6 +7,7 @@ import WorkflowDesigner from './WorkflowDesigner';
 function App() {
     const [showModal, setShowModal] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleCreateClick = () => {
         setShowModal(true);
@@ -14,27 +15,39 @@ function App() {
 
     const handleModalSave = (workflowName: string) => {
         setShowModal(false);
-        // ÷rnek yˆnlendirme: /workflow/my-name-123
         const workflowId = encodeURIComponent(workflowName.toLowerCase().replace(/\s+/g, '-'));
         navigate(`/workflow/${workflowId}`);
     };
 
+    const handleBackToMain = () => {
+        navigate('/');
+    };
+
+    const isDesignerPage = location.pathname.startsWith('/workflow/');
+
     return (
         <>
-            <Header onCreateClick={handleCreateClick} />
-            {showModal ? (
+            {!isDesignerPage && <Header onCreateClick={handleCreateClick} />}
+
+            {showModal && (
                 <CreateWorkflowModalPopup
                     onClose={() => setShowModal(false)}
                     onSave={handleModalSave}
                 />
-            ) : null}
+            )}
+
+            {isDesignerPage && (
+                <div style={{ padding: '10px' }}>
+                    <button onClick={handleBackToMain}>‚Üê Main Page</button>
+                </div>
+            )}
 
             <Routes>
                 <Route path="/workflow/:id" element={<WorkflowDesigner />} />
-                {/* Gerekirse ana sayfaya ba˛ka component de eklenebilir */}
             </Routes>
         </>
     );
+
 }
 
 export default App;
